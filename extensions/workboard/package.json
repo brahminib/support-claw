@@ -1,0 +1,27 @@
+{
+  "name": "@supportclaw/workboard",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw dashboard workboard plugin",
+  "type": "module",
+  "dependencies": {
+    "typebox": "1.1.39"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*",
+    "supportClaw": "2026.5.28"
+  },
+  "peerDependencies": {
+    "supportClaw": ">=2026.6.9"
+  },
+  "peerDependenciesMeta": {
+    "supportClaw": {
+      "optional": true
+    }
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

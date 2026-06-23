@@ -1,0 +1,612 @@
+{
+  "entries": [
+    {
+      "name": "@supportclaw/acpx",
+      "description": "SupportClaw ACP runtime backend",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "acpx",
+          "label": "ACPX Runtime"
+        },
+        "install": {
+          "npmSpec": "@supportclaw/acpx",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.4.25"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/brave-plugin",
+      "description": "SupportClaw Brave plugin",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "brave",
+          "label": "Brave"
+        },
+        "webSearchProviders": [
+          {
+            "id": "brave",
+            "label": "Brave Search",
+            "hint": "Brave Search web results.",
+            "onboardingScopes": ["text-inference"],
+            "credentialLabel": "Brave Search API key",
+            "envVars": ["BRAVE_API_KEY"],
+            "placeholder": "BSA...",
+            "signupUrl": "https://api-dashboard.search.brave.com/app/keys",
+            "docsUrl": "https://docs.supportClaw.ai/tools/brave-search",
+            "credentialPath": "plugins.entries.brave.config.webSearch.apiKey",
+            "autoDetectOrder": 10
+          }
+        ],
+        "install": {
+          "npmSpec": "@supportclaw/brave-plugin",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.4.10",
+          "allowInvalidConfigRecovery": true
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/copilot",
+      "description": "SupportClaw GitHub Copilot agent runtime plugin",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "copilot",
+          "label": "GitHub Copilot agent runtime"
+        },
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/copilot",
+          "npmSpec": "@supportclaw/copilot",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.5.28"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/diagnostics-otel",
+      "description": "SupportClaw diagnostics OpenTelemetry exporter",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "diagnostics-otel",
+          "label": "Diagnostics OpenTelemetry"
+        },
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/diagnostics-otel",
+          "npmSpec": "@supportclaw/diagnostics-otel",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.4.25"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/diagnostics-prometheus",
+      "description": "SupportClaw diagnostics Prometheus exporter",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "diagnostics-prometheus",
+          "label": "Diagnostics Prometheus"
+        },
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/diagnostics-prometheus",
+          "npmSpec": "@supportclaw/diagnostics-prometheus",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.4.25"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/diffs",
+      "description": "SupportClaw diff viewer plugin",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "diffs",
+          "label": "Diffs"
+        },
+        "install": {
+          "npmSpec": "@supportclaw/diffs",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.4.30"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/diffs-language-pack",
+      "description": "SupportClaw diffs viewer syntax highlighting language pack",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "diffs-language-pack",
+          "label": "Diff Viewer Language Pack"
+        },
+        "install": {
+          "npmSpec": "@supportclaw/diffs-language-pack",
+          "clawhubSpec": "clawhub:@supportclaw/diffs-language-pack",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.5.27"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/exa-plugin",
+      "description": "SupportClaw Exa plugin.",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "exa",
+          "label": "Exa"
+        },
+        "contracts": {
+          "webSearchProviders": [
+            "exa"
+          ]
+        },
+        "webSearchProviders": [
+          {
+            "id": "exa",
+            "label": "Exa Search",
+            "hint": "Neural + keyword search with date filters and content extraction",
+            "onboardingScopes": [
+              "text-inference"
+            ],
+            "credentialLabel": "Exa API key",
+            "envVars": [
+              "EXA_API_KEY"
+            ],
+            "placeholder": "exa-...",
+            "signupUrl": "https://exa.ai/",
+            "docsUrl": "https://docs.supportClaw.ai/tools/web",
+            "credentialPath": "plugins.entries.exa.config.webSearch.apiKey",
+            "autoDetectOrder": 65
+          }
+        ],
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/exa-plugin",
+          "npmSpec": "@supportclaw/exa-plugin",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.6.8"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/firecrawl-plugin",
+      "description": "SupportClaw Firecrawl plugin.",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "firecrawl",
+          "label": "Firecrawl"
+        },
+        "contracts": {
+          "webFetchProviders": [
+            "firecrawl"
+          ],
+          "webSearchProviders": [
+            "firecrawl"
+          ],
+          "tools": [
+            "firecrawl_search",
+            "firecrawl_scrape"
+          ]
+        },
+        "webSearchProviders": [
+          {
+            "id": "firecrawl",
+            "label": "Firecrawl Search",
+            "hint": "Structured results with optional result scraping",
+            "onboardingScopes": [
+              "text-inference"
+            ],
+            "credentialLabel": "Firecrawl API key",
+            "envVars": [
+              "FIRECRAWL_API_KEY"
+            ],
+            "placeholder": "fc-...",
+            "signupUrl": "https://www.firecrawl.dev/",
+            "docsUrl": "https://docs.supportClaw.ai/tools/firecrawl",
+            "credentialPath": "plugins.entries.firecrawl.config.webSearch.apiKey",
+            "autoDetectOrder": 60
+          }
+        ],
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/firecrawl-plugin",
+          "npmSpec": "@supportclaw/firecrawl-plugin",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.6.8"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/google-meet",
+      "description": "SupportClaw Google Meet participant plugin",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "google-meet",
+          "label": "Google Meet"
+        },
+        "install": {
+          "npmSpec": "@supportclaw/google-meet",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.4.20"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/gradium-speech",
+      "description": "SupportClaw Gradium speech plugin.",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "gradium",
+          "label": "Gradium"
+        },
+        "contracts": {
+          "speechProviders": [
+            "gradium"
+          ]
+        },
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/gradium-speech",
+          "npmSpec": "@supportclaw/gradium-speech",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.6.8"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/inworld-speech",
+      "description": "SupportClaw Inworld speech plugin.",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "inworld",
+          "label": "Inworld"
+        },
+        "contracts": {
+          "speechProviders": [
+            "inworld"
+          ]
+        },
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/inworld-speech",
+          "npmSpec": "@supportclaw/inworld-speech",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.6.8"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/lobster",
+      "description": "Lobster workflow tool plugin (typed pipelines + resumable approvals)",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "lobster",
+          "label": "Lobster"
+        },
+        "install": {
+          "npmSpec": "@supportclaw/lobster",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.4.25"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/memory-lancedb",
+      "description": "SupportClaw LanceDB-backed long-term memory plugin with auto-recall/capture",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "memory-lancedb",
+          "label": "Memory LanceDB"
+        },
+        "install": {
+          "npmSpec": "@supportclaw/memory-lancedb",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.5.31"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/llama-cpp-provider",
+      "description": "SupportClaw llama.cpp embedding provider plugin",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "llama-cpp",
+          "label": "llama.cpp Provider"
+        },
+        "contracts": {
+          "embeddingProviders": ["local"]
+        },
+        "install": {
+          "npmSpec": "@supportclaw/llama-cpp-provider",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.6.2"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/openshell-sandbox",
+      "description": "SupportClaw OpenShell sandbox backend",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "openshell",
+          "label": "OpenShell Sandbox"
+        },
+        "install": {
+          "npmSpec": "@supportclaw/openshell-sandbox",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.5.12-beta.1"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/parallel-plugin",
+      "description": "SupportClaw Parallel web search plugin.",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "parallel",
+          "label": "Parallel"
+        },
+        "contracts": {
+          "webSearchProviders": [
+            "parallel",
+            "parallel-free"
+          ]
+        },
+        "webSearchProviders": [
+          {
+            "id": "parallel",
+            "label": "Parallel Search",
+            "hint": "LLM-optimized dense excerpts from web sources",
+            "onboardingScopes": [
+              "text-inference"
+            ],
+            "credentialLabel": "Parallel API key",
+            "envVars": [
+              "PARALLEL_API_KEY"
+            ],
+            "placeholder": "par-...",
+            "signupUrl": "https://platform.parallel.ai",
+            "docsUrl": "https://docs.supportClaw.ai/tools/parallel-search",
+            "credentialPath": "plugins.entries.parallel.config.webSearch.apiKey",
+            "autoDetectOrder": 75
+          },
+          {
+            "id": "parallel-free",
+            "label": "Parallel Search (Free)",
+            "hint": "Free web search via Parallel's hosted Search MCP — no API key required",
+            "onboardingScopes": [
+              "text-inference"
+            ],
+            "requiresCredential": false,
+            "envVars": [],
+            "placeholder": "(no key needed)",
+            "signupUrl": "https://parallel.ai",
+            "docsUrl": "https://docs.supportClaw.ai/tools/parallel-search",
+            "credentialPath": ""
+          }
+        ],
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/parallel-plugin",
+          "npmSpec": "@supportclaw/parallel-plugin",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.6.8"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/perplexity-plugin",
+      "description": "SupportClaw Perplexity plugin.",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "perplexity",
+          "label": "Perplexity"
+        },
+        "contracts": {
+          "webSearchProviders": [
+            "perplexity"
+          ]
+        },
+        "webSearchProviders": [
+          {
+            "id": "perplexity",
+            "label": "Perplexity Search",
+            "hint": "Requires Perplexity API key or OpenRouter API key · structured results",
+            "onboardingScopes": [
+              "text-inference"
+            ],
+            "credentialLabel": "Perplexity API key",
+            "envVars": [
+              "PERPLEXITY_API_KEY",
+              "OPENROUTER_API_KEY"
+            ],
+            "placeholder": "pplx-...",
+            "signupUrl": "https://www.perplexity.ai/settings/api",
+            "docsUrl": "https://docs.supportClaw.ai/perplexity",
+            "credentialPath": "plugins.entries.perplexity.config.webSearch.apiKey",
+            "autoDetectOrder": 50
+          }
+        ],
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/perplexity-plugin",
+          "npmSpec": "@supportclaw/perplexity-plugin",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.6.8"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/pixverse-provider",
+      "description": "SupportClaw PixVerse video generation provider plugin",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "pixverse",
+          "label": "PixVerse"
+        },
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/pixverse-provider",
+          "npmSpec": "@supportclaw/pixverse-provider",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.5.26"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/searxng-plugin",
+      "description": "SupportClaw SearXNG plugin",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "searxng",
+          "label": "SearXNG"
+        },
+        "contracts": {
+          "webSearchProviders": [
+            "searxng"
+          ]
+        },
+        "webSearchProviders": [
+          {
+            "id": "searxng",
+            "label": "SearXNG Search",
+            "hint": "Self-hosted meta-search with no API key required",
+            "onboardingScopes": [
+              "text-inference"
+            ],
+            "requiresCredential": true,
+            "credentialLabel": "SearXNG Base URL",
+            "envVars": [
+              "SEARXNG_BASE_URL"
+            ],
+            "placeholder": "http://localhost:8080",
+            "signupUrl": "https://docs.searxng.org/",
+            "docsUrl": "https://docs.supportClaw.ai/tools/searxng-search",
+            "credentialPath": "plugins.entries.searxng.config.webSearch.baseUrl",
+            "autoDetectOrder": 200
+          }
+        ],
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/searxng-plugin",
+          "npmSpec": "@supportclaw/searxng-plugin",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.6.9",
+          "allowInvalidConfigRecovery": true
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/tavily-plugin",
+      "description": "SupportClaw Tavily plugin",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "tavily",
+          "label": "Tavily"
+        },
+        "contracts": {
+          "webSearchProviders": [
+            "tavily"
+          ],
+          "tools": [
+            "tavily_search",
+            "tavily_extract"
+          ]
+        },
+        "webSearchProviders": [
+          {
+            "id": "tavily",
+            "label": "Tavily Search",
+            "hint": "Structured results with domain filters and AI answer summaries",
+            "onboardingScopes": [
+              "text-inference"
+            ],
+            "credentialLabel": "Tavily API key",
+            "envVars": [
+              "TAVILY_API_KEY"
+            ],
+            "placeholder": "tvly-...",
+            "signupUrl": "https://tavily.com/",
+            "docsUrl": "https://docs.supportClaw.ai/tools/tavily",
+            "credentialPath": "plugins.entries.tavily.config.webSearch.apiKey",
+            "autoDetectOrder": 70
+          }
+        ],
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/tavily-plugin",
+          "npmSpec": "@supportclaw/tavily-plugin",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.6.9",
+          "allowInvalidConfigRecovery": true
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/tokenjuice",
+      "description": "SupportClaw tokenjuice exec output compaction plugin",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "tokenjuice",
+          "label": "Tokenjuice"
+        },
+        "install": {
+          "clawhubSpec": "clawhub:@supportclaw/tokenjuice",
+          "npmSpec": "@supportclaw/tokenjuice",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.5.28"
+        }
+      }
+    },
+    {
+      "name": "@supportclaw/voice-call",
+      "description": "SupportClaw voice-call plugin",
+      "source": "official",
+      "kind": "plugin",
+      "supportClaw": {
+        "plugin": {
+          "id": "voice-call",
+          "label": "Voice Call"
+        },
+        "install": {
+          "npmSpec": "@supportclaw/voice-call",
+          "defaultChoice": "npm",
+          "minHostVersion": ">=2026.4.10"
+        }
+      }
+    }
+  ]
+}

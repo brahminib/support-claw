@@ -1,0 +1,18 @@
+// Copy to LocalSigning.xcconfig for personal local signing overrides.
+// This file is only an example and should stay committed.
+
+SUPPORT_CLAW_CODE_SIGN_STYLE = Automatic
+SUPPORT_CLAW_CODE_SIGN_IDENTITY = Apple Development
+SUPPORT_CLAW_DEVELOPMENT_TEAM = YOUR_TEAM_ID
+
+SUPPORT_CLAW_APP_BUNDLE_ID = ai.supportClawfoundation.app
+SUPPORT_CLAW_SHARE_BUNDLE_ID = ai.supportClawfoundation.app.share
+SUPPORT_CLAW_APP_GROUP_ID = group.ai.supportClawfoundation.app.shared
+SUPPORT_CLAW_ACTIVITY_WIDGET_BUNDLE_ID = ai.supportClawfoundation.app.activitywidget
+SUPPORT_CLAW_WATCH_APP_BUNDLE_ID = ai.supportClawfoundation.app.watchkitapp
+
+// Leave empty with automatic signing.
+SUPPORT_CLAW_APP_PROFILE =
+SUPPORT_CLAW_SHARE_PROFILE =
+SUPPORT_CLAW_ACTIVITY_WIDGET_PROFILE =
+SUPPORT_CLAW_WATCH_APP_PROFILE =

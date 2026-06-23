@@ -1,0 +1,37 @@
+{
+  "name": "@supportclaw/openshell-sandbox",
+  "version": "2026.6.9",
+  "description": "SupportClaw sandbox backend for the NVIDIA OpenShell CLI with mirrored local workspaces and SSH command execution.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brahminib/support-claw"
+  },
+  "type": "module",
+  "dependencies": {
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "install": {
+      "npmSpec": "@supportclaw/openshell-sandbox",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.5.12-beta.1"
+    },
+    "compat": {
+      "pluginApi": ">=2026.6.9"
+    },
+    "build": {
+      "supportClawVersion": "2026.6.9",
+      "bundledDist": false
+    },
+    "release": {
+      "publishToClawHub": true,
+      "publishToNpm": true
+    }
+  }
+}

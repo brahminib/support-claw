@@ -1,0 +1,48 @@
+{
+  "name": "@supportclaw/voice-call",
+  "version": "2026.6.9",
+  "description": "SupportClaw voice-call plugin for Twilio, Telnyx, and Plivo phone calls.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brahminib/support-claw"
+  },
+  "type": "module",
+  "dependencies": {
+    "commander": "14.0.3",
+    "typebox": "1.1.39",
+    "ws": "8.21.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*",
+    "supportClaw": "2026.5.28"
+  },
+  "peerDependencies": {
+    "supportClaw": ">=2026.6.9"
+  },
+  "peerDependenciesMeta": {
+    "supportClaw": {
+      "optional": true
+    }
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "install": {
+      "npmSpec": "@supportclaw/voice-call",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.4.10"
+    },
+    "compat": {
+      "pluginApi": ">=2026.6.9"
+    },
+    "build": {
+      "supportClawVersion": "2026.6.9"
+    },
+    "release": {
+      "publishToClawHub": true,
+      "publishToNpm": true
+    }
+  }
+}

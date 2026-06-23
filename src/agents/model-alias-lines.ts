@@ -1,0 +1,26 @@
+/**
+ * Formats configured model aliases for prompt-visible model guidance.
+ */
+import { normalizeOptionalString } from "@supportclaw/normalization-core/string-coerce";
+import type { SupportClawConfig } from "../config/types.supportClaw.js";
+
+/** Builds deterministic prompt lines for configured model aliases. */
+export function buildModelAliasLines(cfg?: SupportClawConfig) {
+  const models = cfg?.agents?.defaults?.models ?? {};
+  const entries: Array<{ alias: string; model: string }> = [];
+  for (const [keyRaw, entryRaw] of Object.entries(models)) {
+    const model = normalizeOptionalString(keyRaw) ?? "";
+    if (!model) {
+      continue;
+    }
+    const alias =
+      normalizeOptionalString((entryRaw as { alias?: string } | undefined)?.alias) ?? "";
+    if (!alias) {
+      continue;
+    }
+    entries.push({ alias, model });
+  }
+  return entries
+    .toSorted((a, b) => a.alias.localeCompare(b.alias))
+    .map((entry) => `- ${entry.alias}: ${entry.model}`);
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@supportclaw/tokenjuice",
+  "version": "2026.6.9",
+  "description": "SupportClaw tokenjuice exec output compaction plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brahminib/support-claw"
+  },
+  "type": "module",
+  "dependencies": {
+    "tokenjuice": "0.8.1"
+  },
+  "peerDependencies": {
+    "supportClaw": ">=2026.6.9"
+  },
+  "peerDependenciesMeta": {
+    "supportClaw": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*",
+    "supportClaw": "2026.5.28"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "install": {
+      "clawhubSpec": "clawhub:@supportclaw/tokenjuice",
+      "npmSpec": "@supportclaw/tokenjuice",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.5.28"
+    },
+    "compat": {
+      "pluginApi": ">=2026.6.9"
+    },
+    "build": {
+      "supportClawVersion": "2026.6.9",
+      "bundledDist": false
+    },
+    "release": {
+      "publishToClawHub": true,
+      "publishToNpm": true
+    }
+  }
+}

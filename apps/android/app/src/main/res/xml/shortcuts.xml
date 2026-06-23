@@ -1,0 +1,17 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <capability
+        android:name="custom.actions.intent.ASK_SUPPORT_CLAW"
+        app:queryPatterns="@array/ask_supportClaw_query_patterns">
+        <intent
+            android:action="ai.supportClaw.app.action.ASK_SUPPORT_CLAW"
+            android:targetPackage="ai.supportClaw.app"
+            android:targetClass="ai.supportClaw.app.MainActivity">
+            <parameter
+                android:name="prompt"
+                android:key="prompt"
+                android:mimeType="https://schema.org/Text"
+                android:required="true" />
+        </intent>
+    </capability>
+</shortcuts>

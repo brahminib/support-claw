@@ -1,0 +1,19 @@
+{
+  "name": "@supportclaw/xai-plugin",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw xAI plugin",
+  "type": "module",
+  "dependencies": {
+    "typebox": "1.1.39"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*",
+    "ws": "8.21.0"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

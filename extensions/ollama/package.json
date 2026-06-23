@@ -1,0 +1,18 @@
+{
+  "name": "@supportclaw/ollama-provider",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw Ollama provider plugin",
+  "type": "module",
+  "dependencies": {
+    "typebox": "1.1.39"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

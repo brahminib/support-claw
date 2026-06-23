@@ -1,0 +1,19 @@
+{
+  "name": "@supportclaw/web-readability-plugin",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw local Readability web extraction plugin",
+  "type": "module",
+  "dependencies": {
+    "@mozilla/readability": "0.6.0",
+    "linkedom": "0.18.12"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

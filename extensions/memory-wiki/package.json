@@ -1,0 +1,29 @@
+{
+  "name": "@supportclaw/memory-wiki",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw persistent wiki plugin",
+  "type": "module",
+  "dependencies": {
+    "typebox": "1.1.39",
+    "yaml": "2.9.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*",
+    "supportClaw": "2026.5.28"
+  },
+  "peerDependencies": {
+    "supportClaw": ">=2026.6.9"
+  },
+  "peerDependenciesMeta": {
+    "supportClaw": {
+      "optional": true
+    }
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

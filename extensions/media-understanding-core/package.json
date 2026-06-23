@@ -1,0 +1,11 @@
+{
+  "name": "@supportclaw/media-understanding-core",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw media understanding runtime package",
+  "type": "module",
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  },
+  "supportClaw": {}
+}

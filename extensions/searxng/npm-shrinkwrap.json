@@ -1,0 +1,12 @@
+{
+  "name": "@supportclaw/searxng-plugin",
+  "version": "2026.6.9",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "@supportclaw/searxng-plugin",
+      "version": "2026.6.9"
+    }
+  }
+}

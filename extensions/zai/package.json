@@ -1,0 +1,35 @@
+{
+  "name": "@supportclaw/zai-provider",
+  "version": "2026.6.9",
+  "description": "SupportClaw Z.AI provider plugin",
+  "type": "module",
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "install": {
+      "clawhubSpec": "clawhub:@supportclaw/zai-provider",
+      "npmSpec": "@supportclaw/zai-provider",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.6.9"
+    },
+    "compat": {
+      "pluginApi": ">=2026.6.9"
+    },
+    "build": {
+      "supportClawVersion": "2026.6.9",
+      "bundledDist": false
+    },
+    "release": {
+      "publishToClawHub": true,
+      "publishToNpm": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brahminib/support-claw"
+  }
+}

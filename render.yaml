@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: supportClaw
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: SUPPORT_CLAW_GATEWAY_PORT
+        value: "8080"
+      - key: SUPPORT_CLAW_STATE_DIR
+        value: /data/.supportClaw
+      - key: SUPPORT_CLAW_WORKSPACE_DIR
+        value: /data/workspace
+      - key: SUPPORT_CLAW_GATEWAY_TOKEN
+        generateValue: true
+    disk:
+      name: supportClaw-data
+      mountPath: /data
+      sizeGB: 1

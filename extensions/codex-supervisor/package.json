@@ -1,0 +1,21 @@
+{
+  "name": "@supportclaw/codex-supervisor",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw Codex app-server fleet supervision plugin.",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "typebox": "1.1.39",
+    "ws": "8.21.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

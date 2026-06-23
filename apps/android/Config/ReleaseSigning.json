@@ -1,0 +1,14 @@
+{
+  "signingRepo": "git@github.com:supportClaw/apps-signing.git",
+  "signingBranch": "main",
+  "assetPath": "android/supportClaw",
+  "uploadKeystoreEncryptedFile": "upload-keystore.jks.enc",
+  "gradlePropertiesEncryptedFile": "gradle.properties.enc",
+  "materializedRoot": "apps/android/build/release-signing",
+  "gradlePropertyNames": [
+    "SUPPORT_CLAW_ANDROID_STORE_FILE",
+    "SUPPORT_CLAW_ANDROID_STORE_PASSWORD",
+    "SUPPORT_CLAW_ANDROID_KEY_ALIAS",
+    "SUPPORT_CLAW_ANDROID_KEY_PASSWORD"
+  ]
+}

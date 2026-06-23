@@ -1,0 +1,26 @@
+// Shared iOS signing defaults for local development + CI.
+#include "Version.xcconfig"
+
+SUPPORT_CLAW_IOS_DEFAULT_TEAM = FWJYW4S8P8
+SUPPORT_CLAW_IOS_SELECTED_TEAM = $(SUPPORT_CLAW_IOS_DEFAULT_TEAM)
+SUPPORT_CLAW_DEVELOPMENT_TEAM = $(SUPPORT_CLAW_IOS_SELECTED_TEAM)
+SUPPORT_CLAW_CODE_SIGN_STYLE = Automatic
+SUPPORT_CLAW_CODE_SIGN_IDENTITY = Apple Development
+SUPPORT_CLAW_APP_BUNDLE_ID = ai.supportClawfoundation.app
+SUPPORT_CLAW_APP_GROUP_ID = group.ai.supportClawfoundation.app.shared
+SUPPORT_CLAW_WATCH_APP_BUNDLE_ID = ai.supportClawfoundation.app.watchkitapp
+SUPPORT_CLAW_ACTIVITY_WIDGET_BUNDLE_ID = ai.supportClawfoundation.app.activitywidget
+SUPPORT_CLAW_ACTIVITY_WIDGET_PROFILE =
+SUPPORT_CLAW_WATCH_APP_PROFILE =
+
+// Local contributors can override this by running scripts/ios-configure-signing.sh.
+// Keep include after defaults: xcconfig is evaluated top-to-bottom.
+#include? "../.local-signing.xcconfig"
+#include? "../LocalSigning.xcconfig"
+
+CODE_SIGN_STYLE = $(SUPPORT_CLAW_CODE_SIGN_STYLE)
+CODE_SIGN_IDENTITY = $(SUPPORT_CLAW_CODE_SIGN_IDENTITY)
+DEVELOPMENT_TEAM = $(SUPPORT_CLAW_DEVELOPMENT_TEAM)
+
+// Let Xcode manage provisioning for the selected local team unless a local override pins one.
+PROVISIONING_PROFILE_SPECIFIER =

@@ -1,0 +1,18 @@
+{
+  "name": "@supportclaw/microsoft-speech",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw Microsoft speech plugin",
+  "type": "module",
+  "dependencies": {
+    "node-edge-tts": "1.2.10"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

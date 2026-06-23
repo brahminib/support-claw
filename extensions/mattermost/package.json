@@ -1,0 +1,59 @@
+{
+  "name": "@supportclaw/mattermost",
+  "version": "2026.6.9",
+  "description": "SupportClaw Mattermost channel plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brahminib/support-claw"
+  },
+  "type": "module",
+  "dependencies": {
+    "ws": "8.21.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*",
+    "supportClaw": "2026.5.28"
+  },
+  "peerDependencies": {
+    "supportClaw": ">=2026.6.9"
+  },
+  "peerDependenciesMeta": {
+    "supportClaw": {
+      "optional": true
+    }
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "setupEntry": "./setup-entry.ts",
+    "channel": {
+      "id": "mattermost",
+      "label": "Mattermost",
+      "selectionLabel": "Mattermost (plugin)",
+      "docsPath": "/channels/mattermost",
+      "docsLabel": "mattermost",
+      "blurb": "self-hosted Slack-style chat; install the plugin to enable.",
+      "order": 65
+    },
+    "install": {
+      "clawhubSpec": "clawhub:@supportclaw/mattermost",
+      "npmSpec": "@supportclaw/mattermost",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.6.9",
+      "allowInvalidConfigRecovery": true
+    },
+    "compat": {
+      "pluginApi": ">=2026.6.9"
+    },
+    "build": {
+      "supportClawVersion": "2026.6.9",
+      "bundledDist": false
+    },
+    "release": {
+      "publishToClawHub": true,
+      "publishToNpm": true
+    }
+  }
+}

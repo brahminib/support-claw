@@ -1,0 +1,73 @@
+{
+  "name": "@supportclaw/whatsapp",
+  "version": "2026.6.9",
+  "description": "SupportClaw WhatsApp channel plugin for WhatsApp Web chats.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brahminib/support-claw"
+  },
+  "type": "module",
+  "dependencies": {
+    "audio-decode": "2.2.3",
+    "baileys": "7.0.0-rc13",
+    "typebox": "1.1.39"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*",
+    "supportClaw": "2026.5.28"
+  },
+  "peerDependencies": {
+    "supportClaw": ">=2026.6.9"
+  },
+  "peerDependenciesMeta": {
+    "supportClaw": {
+      "optional": true
+    }
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "setupEntry": "./setup-entry.ts",
+    "setupFeatures": {
+      "legacyStateMigrations": true,
+      "legacySessionSurfaces": true
+    },
+    "channel": {
+      "id": "whatsapp",
+      "label": "WhatsApp",
+      "selectionLabel": "WhatsApp (QR link)",
+      "detailLabel": "WhatsApp Web",
+      "docsPath": "/channels/whatsapp",
+      "docsLabel": "whatsapp",
+      "blurb": "works with your own number; recommend a separate phone + eSIM.",
+      "systemImage": "message",
+      "persistedAuthState": {
+        "specifier": "./auth-presence",
+        "exportName": "hasAnyWhatsAppAuth"
+      },
+      "cliAddOptions": [
+        {
+          "flags": "--auth-dir <path>",
+          "description": "WhatsApp auth directory override"
+        }
+      ]
+    },
+    "install": {
+      "clawhubSpec": "clawhub:@supportclaw/whatsapp",
+      "npmSpec": "@supportclaw/whatsapp",
+      "defaultChoice": "clawhub",
+      "minHostVersion": ">=2026.4.25"
+    },
+    "compat": {
+      "pluginApi": ">=2026.6.9"
+    },
+    "build": {
+      "supportClawVersion": "2026.6.9"
+    },
+    "release": {
+      "publishToClawHub": true,
+      "publishToNpm": true
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@supportclaw/lmstudio-provider",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw LM Studio provider plugin",
+  "type": "module",
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

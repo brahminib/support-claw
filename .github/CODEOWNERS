@@ -1,0 +1,71 @@
+# Protect the ownership rules themselves.
+/.github/CODEOWNERS @steipete
+
+# WARNING: GitHub CODEOWNERS uses last-match-wins semantics.
+# If you add overlapping rules below the secops block, include @supportclaw/supportClaw-secops
+# on those entries too or you can silently remove required secops review.
+# Security-sensitive code, config, and docs require secops review.
+/SECURITY.md @supportclaw/supportClaw-secops
+/.github/dependabot.yml @supportclaw/supportClaw-secops
+/.github/codeql/ @supportclaw/supportClaw-secops
+/.github/workflows/codeql.yml @supportclaw/supportClaw-secops
+/.github/workflows/codeql-android-critical-security.yml @supportclaw/supportClaw-secops
+/.github/workflows/codeql-critical-quality.yml @supportclaw/supportClaw-secops
+/.github/workflows/dependency-guard.yml @supportclaw/supportClaw-secops
+/.github/workflows/security-sensitive-guard.yml @supportclaw/supportClaw-secops
+/test/scripts/dependency-guard-workflow.test.ts @supportclaw/supportClaw-secops
+/test/scripts/dependency-guard-script.test.ts @supportclaw/supportClaw-secops
+/test/scripts/security-sensitive-guard-workflow.test.ts @supportclaw/supportClaw-secops
+/test/scripts/security-sensitive-guard-script.test.ts @supportclaw/supportClaw-secops
+/scripts/github/dependency-guard.mjs @supportclaw/supportClaw-secops
+/scripts/github/security-sensitive-guard.mjs @supportclaw/supportClaw-secops
+/.gitignore @supportclaw/supportClaw-secops
+/package-lock.json @supportclaw/supportClaw-secops
+/npm-shrinkwrap.json @supportclaw/supportClaw-secops
+/extensions/*/package-lock.json @supportclaw/supportClaw-secops
+/extensions/*/npm-shrinkwrap.json @supportclaw/supportClaw-secops
+/pnpm-lock.yaml @supportclaw/supportClaw-secops
+/scripts/generate-npm-shrinkwrap.mjs @supportclaw/supportClaw-secops
+/src/security/ @supportclaw/supportClaw-secops
+/src/secrets/ @supportclaw/supportClaw-secops
+/src/config/*secret*.ts @supportclaw/supportClaw-secops
+/src/config/**/*secret*.ts @supportclaw/supportClaw-secops
+/src/gateway/*auth*.ts @supportclaw/supportClaw-secops
+/src/gateway/**/*auth*.ts @supportclaw/supportClaw-secops
+/src/gateway/*secret*.ts @supportclaw/supportClaw-secops
+/src/gateway/**/*secret*.ts @supportclaw/supportClaw-secops
+/src/gateway/security-path*.ts @supportclaw/supportClaw-secops
+/src/gateway/resolve-configured-secret-input-string*.ts @supportclaw/supportClaw-secops
+/packages/gateway-protocol/src/**/*secret*.ts @supportclaw/supportClaw-secops
+/src/gateway/server-methods/secrets*.ts @supportclaw/supportClaw-secops
+/src/agents/*auth*.ts @supportclaw/supportClaw-secops
+/src/agents/**/*auth*.ts @supportclaw/supportClaw-secops
+/src/agents/auth-profiles*.ts @supportclaw/supportClaw-secops
+/src/agents/auth-health*.ts @supportclaw/supportClaw-secops
+/src/agents/auth-profiles/ @supportclaw/supportClaw-secops
+/src/agents/sandbox.ts @supportclaw/supportClaw-secops
+/src/agents/sandbox-*.ts @supportclaw/supportClaw-secops
+/src/agents/sandbox/ @supportclaw/supportClaw-secops
+/src/infra/secret-file*.ts @supportclaw/supportClaw-secops
+/src/cron/stagger.ts @supportclaw/supportClaw-secops
+/src/cron/service/jobs.ts @supportclaw/supportClaw-secops
+/docs/security/ @supportclaw/supportClaw-secops
+/docs/gateway/authentication.md @supportclaw/supportClaw-secops
+/docs/gateway/sandbox-vs-tool-policy-vs-elevated.md @supportclaw/supportClaw-secops
+/docs/gateway/sandboxing.md @supportclaw/supportClaw-secops
+/docs/gateway/secrets-plan-contract.md @supportclaw/supportClaw-secops
+/docs/gateway/secrets.md @supportclaw/supportClaw-secops
+/docs/gateway/security/ @supportclaw/supportClaw-secops
+/docs/cli/approvals.md @supportclaw/supportClaw-secops
+/docs/cli/sandbox.md @supportclaw/supportClaw-secops
+/docs/cli/security.md @supportclaw/supportClaw-secops
+/docs/cli/secrets.md @supportclaw/supportClaw-secops
+/docs/reference/secretref-credential-surface.md @supportclaw/supportClaw-secops
+/docs/reference/secretref-user-supplied-credentials-matrix.json @supportclaw/supportClaw-secops
+
+# Release workflow and its supporting release-path checks.
+/.github/workflows/supportClaw-npm-release.yml @supportclaw/supportClaw-release-managers
+/docs/reference/RELEASING.md @supportclaw/supportClaw-release-managers
+/scripts/supportClaw-npm-publish.sh @supportclaw/supportClaw-release-managers
+/scripts/supportClaw-npm-release-check.ts @supportclaw/supportClaw-release-managers
+/scripts/release-check.ts @supportclaw/supportClaw-release-managers

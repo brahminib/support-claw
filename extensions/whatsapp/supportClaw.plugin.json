@@ -1,0 +1,26 @@
+{
+  "id": "whatsapp",
+  "name": "WhatsApp",
+  "description": "SupportClaw WhatsApp channel plugin for WhatsApp Web chats.",
+  "skills": ["./skills"],
+  "activation": {
+    "onStartup": false
+  },
+  "channels": ["whatsapp"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "pluginHooks": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "messageReceived": {
+            "type": "boolean",
+            "description": "Opt in to broadcasting inbound WhatsApp message_received hook payloads to loaded plugins."
+          }
+        }
+      }
+    }
+  }
+}

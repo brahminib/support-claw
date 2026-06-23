@@ -1,0 +1,27 @@
+{
+  "name": "@supportclaw/policy",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw policy doctor checks for workspace conformance",
+  "type": "module",
+  "dependencies": {
+    "json5": "2.2.3"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*",
+    "supportClaw": "2026.5.28"
+  },
+  "peerDependencies": {
+    "supportClaw": ">=2026.6.9"
+  },
+  "peerDependenciesMeta": {
+    "supportClaw": {
+      "optional": true
+    }
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

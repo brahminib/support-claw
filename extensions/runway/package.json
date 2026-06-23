@@ -1,0 +1,15 @@
+{
+  "name": "@supportclaw/runway-provider",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw Runway video provider plugin",
+  "type": "module",
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

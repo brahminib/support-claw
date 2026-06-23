@@ -1,0 +1,47 @@
+{
+  "teamId": "FWJYW4S8P8",
+  "signingRepo": "git@github.com:supportClaw/apps-signing.git",
+  "signingBranch": "main",
+  "profileType": "appstore",
+  "appGroupId": "group.ai.supportClawfoundation.app.shared",
+  "targets": [
+    {
+      "target": "SupportClaw",
+      "displayName": "SupportClaw",
+      "bundleId": "ai.supportClawfoundation.app",
+      "platform": "IOS",
+      "profileKey": "SUPPORT_CLAW_APP_PROFILE",
+      "profileName": "SupportClaw App Store ai.supportClawfoundation.app",
+      "capabilities": ["PUSH_NOTIFICATIONS", "APP_GROUPS"],
+      "appGroups": ["group.ai.supportClawfoundation.app.shared"]
+    },
+    {
+      "target": "SupportClawShareExtension",
+      "displayName": "SupportClaw Share",
+      "bundleId": "ai.supportClawfoundation.app.share",
+      "platform": "IOS",
+      "profileKey": "SUPPORT_CLAW_SHARE_PROFILE",
+      "profileName": "SupportClaw App Store ai.supportClawfoundation.app.share",
+      "capabilities": ["APP_GROUPS"],
+      "appGroups": ["group.ai.supportClawfoundation.app.shared"]
+    },
+    {
+      "target": "SupportClawActivityWidget",
+      "displayName": "SupportClaw Activity Widget",
+      "bundleId": "ai.supportClawfoundation.app.activitywidget",
+      "platform": "IOS",
+      "profileKey": "SUPPORT_CLAW_ACTIVITY_WIDGET_PROFILE",
+      "profileName": "SupportClaw App Store ai.supportClawfoundation.app.activitywidget",
+      "capabilities": []
+    },
+    {
+      "target": "SupportClawWatchApp",
+      "displayName": "SupportClaw Watch App",
+      "bundleId": "ai.supportClawfoundation.app.watchkitapp",
+      "platform": "IOS",
+      "profileKey": "SUPPORT_CLAW_WATCH_APP_PROFILE",
+      "profileName": "SupportClaw App Store ai.supportClawfoundation.app.watchkitapp",
+      "capabilities": []
+    }
+  ]
+}

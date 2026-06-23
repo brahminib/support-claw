@@ -1,0 +1,19 @@
+{
+  "name": "@supportclaw/google-plugin",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw Google plugin",
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "2.7.0",
+    "google-auth-library": "10.6.2"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

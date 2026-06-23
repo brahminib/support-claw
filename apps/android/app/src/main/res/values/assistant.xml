@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="ask_supportClaw_query_patterns">
+        <item>ask SupportClaw $prompt</item>
+        <item>tell SupportClaw to $prompt</item>
+        <item>open SupportClaw and ask $prompt</item>
+    </string-array>
+</resources>

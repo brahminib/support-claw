@@ -1,0 +1,55 @@
+{
+  "name": "@supportclaw/raft",
+  "version": "2026.6.9",
+  "description": "SupportClaw Raft channel plugin for Raft CLI wake bridges.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brahminib/support-claw"
+  },
+  "type": "module",
+  "dependencies": {
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*",
+    "supportClaw": "2026.5.28"
+  },
+  "peerDependencies": {
+    "supportClaw": ">=2026.6.9"
+  },
+  "peerDependenciesMeta": {
+    "supportClaw": {
+      "optional": true
+    }
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "setupEntry": "./setup-entry.ts",
+    "install": {
+      "npmSpec": "@supportclaw/raft",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.6.8"
+    },
+    "compat": {
+      "pluginApi": ">=2026.6.9"
+    },
+    "build": {
+      "supportClawVersion": "2026.6.9"
+    },
+    "channel": {
+      "id": "raft",
+      "label": "Raft",
+      "selectionLabel": "Raft (CLI wake bridge)",
+      "docsPath": "/channels/raft",
+      "docsLabel": "raft",
+      "blurb": "Raft CLI wake bridge for human and agent collaboration.",
+      "order": 72
+    },
+    "release": {
+      "publishToClawHub": true,
+      "publishToNpm": true
+    }
+  }
+}

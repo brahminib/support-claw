@@ -1,0 +1,11 @@
+# SupportClaw Android Changelog
+
+## Unreleased
+
+Maintenance update for the current SupportClaw Android release.
+
+## 2026.6.2 - 2026-06-02
+
+SupportClaw is now available on Android.
+
+Connect to your SupportClaw Gateway to chat with your assistant, use realtime Talk mode, review approvals, and bring Android device capabilities like camera, location, screen, and notifications into your private automation workflows.

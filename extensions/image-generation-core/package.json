@@ -1,0 +1,10 @@
+{
+  "name": "@supportclaw/image-generation-core",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw image generation runtime package",
+  "type": "module",
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  }
+}

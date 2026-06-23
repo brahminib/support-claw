@@ -1,0 +1,15 @@
+{
+  "name": "@supportclaw/copilot-proxy",
+  "version": "2026.6.9",
+  "private": true,
+  "description": "SupportClaw Copilot Proxy provider plugin",
+  "type": "module",
+  "devDependencies": {
+    "@supportclaw/plugin-sdk": "workspace:*"
+  },
+  "supportClaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
