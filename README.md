@@ -1,8 +1,8 @@
 # Support Claw
 
-Support Claw is a customer support AI assistant built on top of the SupportClaw multi-channel assistant gateway. The goal of this project is to turn a general personal assistant framework into a support operations assistant that can triage inbound messages, draft replies, summarize customer context, and route issues across channels like Slack, Discord, Telegram, WhatsApp, and web chat.
+Support Claw is an opinionated support-operations AI platform built on the SupportClaw multi-channel assistant gateway. It uses the gateway's mature channel, agent, security, and deployment architecture as a foundation for customer-support workflows across Slack, Discord, Telegram, WhatsApp, and web chat.
 
-This repository is a derived project based on [SupportClaw](https://github.com/brahminib/support-claw). SupportClaw's MIT license and third-party notices are preserved in this repo.
+The platform is designed for teams that need one operational layer for understanding incoming requests, assisting human agents, retrieving company knowledge, and coordinating resolution work across channels.
 
 ## Use Case
 
@@ -55,14 +55,18 @@ Expected assistant behavior:
 
 ## Project Direction
 
-The first version keeps SupportClaw's core gateway architecture intact and specializes the project through product positioning, configuration, prompts, and support-focused examples. Future implementation work can add:
+The current release establishes the Support Claw foundation: the product identity, support-oriented configuration and workflows, and a user experience built for support teams. SupportClaw remains the underlying assistant gateway; Support Claw is the product layer that defines how that gateway is applied to support operations.
 
-- Support-specific agent templates.
-- Ticket classification schemas.
-- Slack/Discord routing rules.
-- CRM or helpdesk integrations.
-- Knowledge-base retrieval for product documentation.
-- Guardrails for customer-facing answers.
+Future releases will add substantial support-specific capabilities rather than a set of isolated integrations:
+
+- **AI Ticket Intelligence** for classification, intent detection, priority scoring, sentiment analysis, and escalation recommendations.
+- **Support Agent Copilot** for response drafts, context-aware reply generation, conversation summaries, suggested next actions, and SLA-risk alerts.
+- **Knowledge & Retrieval** for product documentation, internal runbooks, company knowledge, and grounded dynamic answers.
+- **Workflow Automation** for multi-channel routing, team assignment, escalation paths, follow-up automation, and resolution tracking.
+- **CRM & Helpdesk Integrations** for Zendesk, Freshdesk, HubSpot, Salesforce, and custom ticketing systems.
+- **Analytics & Operations** for ticket trends, root-cause detection, agent productivity, customer sentiment reporting, and SLA monitoring.
+
+See [docs/SUPPORT_CLAW_USE_CASES.md](docs/SUPPORT_CLAW_USE_CASES.md) for the staged product roadmap and the distinction between the current foundation and planned capabilities.
 
 ## Install
 
@@ -100,14 +104,8 @@ At minimum, configure one model provider key such as `OPENAI_API_KEY`, `ANTHROPI
 
 For support use cases, start with one internal channel such as Slack or Discord before exposing customer-facing channels.
 
-## Repository Notes
+## Platform Foundation
 
-This project intentionally starts as a focused derivative:
-
-- Root metadata and docs are branded for Support Claw.
-- SupportClaw implementation modules remain available.
-- Upstream license and notices remain intact.
-- The package includes a `support-claw` CLI alias.
-
-See [docs/SUPPORT_CLAW_USE_CASES.md](docs/SUPPORT_CLAW_USE_CASES.md) for the project-specific roadmap.
-
+- SupportClaw supplies the underlying assistant gateway and multi-channel runtime.
+- Support Claw owns the support-operations product direction, workflows, and future support-specific capabilities.
+- The package includes a `support-claw` CLI alias for the product surface.

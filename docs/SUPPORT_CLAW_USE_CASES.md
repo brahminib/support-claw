@@ -1,6 +1,8 @@
-# Support Claw Use Cases
+# Support Claw Product Direction and Roadmap
 
-Support Claw adapts the SupportClaw assistant gateway into a customer support operations assistant. This document captures the product direction for turning the base gateway into a project with its own clear purpose.
+Support Claw is an opinionated support-operations layer built on the SupportClaw assistant gateway. The gateway provides the proven multi-channel, agent, security, and deployment foundation; Support Claw focuses product development on the work of customer support teams.
+
+The current release establishes that foundation through branding, configuration, workflows, and a support-oriented user experience. The capabilities below describe planned product differentiation, not features that are already available.
 
 ## Primary Persona
 
@@ -123,36 +125,48 @@ Include symptoms, impact, reproduction steps, relevant environment details,
 and the next technical question to answer.
 ```
 
-## Implementation Roadmap
+## Product Roadmap
 
-### Phase 1: Rebrand and Project Setup
+Each roadmap theme is a product surface with shared workflows, data, and operational controls—not a collection of one-off connectors.
 
-- Rename package metadata to Support Claw.
-- Add support-specific README and docs.
-- Keep upstream license attribution.
-- Add CLI alias `support-claw`.
+### Foundation: Current Release
 
-### Phase 2: Support Agent Templates
+- Establish the Support Claw product identity and support-operations focus.
+- Provide support-oriented configuration, example workflows, and human-review guidance.
+- Build on the SupportClaw gateway's multi-channel runtime rather than reimplementing channel, agent, or deployment infrastructure.
 
-- Add support triage prompt templates.
-- Add reply drafting templates.
-- Add escalation summary templates.
-- Add examples under `docs/`.
+### AI Ticket Intelligence
 
-### Phase 3: Channel Workflows
+- Automated ticket classification and intent detection.
+- Priority scoring and customer sentiment analysis.
+- Escalation recommendations with confidence and rationale.
 
-- Configure Slack or Discord as the first internal support channel.
-- Define routing conventions for teams and queues.
-- Add message examples for common support categories.
+### Support Agent Copilot
 
-### Phase 4: Knowledge Base Integration
+- Context-aware response drafting and reply generation.
+- Conversation summarization for handoffs.
+- Suggested next actions and SLA-risk alerts.
 
-- Add retrieval over product docs.
-- Add citation behavior for support answers.
-- Add confidence and escalation rules.
+### Knowledge & Retrieval Layer
 
-### Phase 5: Helpdesk Integration
+- Documentation and product-knowledge retrieval.
+- Internal runbook retrieval for agent guidance.
+- Dynamic answers grounded in company knowledge.
 
-- Add adapters for ticket creation and updates.
-- Sync summaries, priority, and owner recommendations.
-- Track agent-reviewed responses.
+### Workflow Automation
+
+- Multi-channel routing and team assignment rules.
+- Escalation workflows and follow-up automation.
+- Resolution tracking across the support lifecycle.
+
+### CRM & Helpdesk Integrations
+
+- Zendesk, Freshdesk, HubSpot, and Salesforce integrations.
+- Custom ticketing-system adapters through a consistent support data model.
+- Bidirectional updates for summaries, priority, ownership, and outcomes.
+
+### Analytics & Operations
+
+- Ticket trend analysis and root-cause detection.
+- Agent productivity insights and customer sentiment reporting.
+- SLA monitoring for operational risk and improvement opportunities.
