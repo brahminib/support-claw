@@ -111,12 +111,3 @@ This project intentionally starts as a focused derivative:
 
 See [docs/SUPPORT_CLAW_USE_CASES.md](docs/SUPPORT_CLAW_USE_CASES.md) for the project-specific roadmap.
 
-## Attribution
-
-Support Claw is derived from SupportClaw:
-
-- Upstream: https://github.com/brahminib/support-claw
-- License: MIT
-- Original copyright: Copyright (c) 2026 SupportClaw Foundation
-
-The original MIT license is included in [LICENSE](LICENSE), and additional notices are included in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
